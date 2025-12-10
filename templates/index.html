@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slovenski Meme Generator 🖼️</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; background-color: #f4f4f4; }
+        h1 { text-align: center; color: #333; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        label, input, textarea { display: block; margin-bottom: 10px; width: 100%; box-sizing: border-box; }
+        input[type="file"], input[type="text"] { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        input[type="submit"] { background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        input[type="submit"]:hover { background-color: #0056b3; }
+        p.info { margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px; font-size: 0.9em; color: #666; text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Slovenski Meme Generator 🤪</h1>
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <label for="slika">Naloži sliko:</label>
+        <input type="file" name="slika" id="slika" accept="image/*" required>
+
+        <label for="zgornji_tekst">Zgornji tekst:</label>
+        <input type="text" name="zgornji_tekst" id="zgornji_tekst" maxlength="50" placeholder="VAŠ ZGORNJI TEKST">
+
+        <label for="spodnji_tekst">Spodnji tekst:</label>
+        <input type="text" name="spodnji_tekst" id="spodnji_tekst" maxlength="50" placeholder="VAŠ SPODNJI TEKST">
+
+        <input type="submit" value="Generiraj Meme!">
+    </form>
+
+    <p class="info">Generirani meme bo prikazan neposredno v brskalniku kot nova slika.</p>
+</body>
+</html>
